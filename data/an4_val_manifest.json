@@ -1,0 +1,353 @@
+{
+  "root_path": "/data/val/",
+  "samples": [
+    {
+      "wav_path": "an4/wav/an29-mdxs-b.wav",
+      "txt_path": "an4/txt/an29-mdxs-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen5-mmal-b.wav",
+      "txt_path": "an4/txt/cen5-mmal-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an375-mblb-b.wav",
+      "txt_path": "an4/txt/an375-mblb-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an95-fplp-b.wav",
+      "txt_path": "an4/txt/an95-fplp-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an154-mwhw-b.wav",
+      "txt_path": "an4/txt/an154-mwhw-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-mrjc2-b.wav",
+      "txt_path": "an4/txt/cen3-mrjc2-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an296-fsaf2-b.wav",
+      "txt_path": "an4/txt/an296-fsaf2-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen2-mmsh-b.wav",
+      "txt_path": "an4/txt/cen2-mmsh-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-meab-b.wav",
+      "txt_path": "an4/txt/cen3-meab-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an118-fmjc-b.wav",
+      "txt_path": "an4/txt/an118-fmjc-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen8-mjbh-b.wav",
+      "txt_path": "an4/txt/cen8-mjbh-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen7-mmsh-b.wav",
+      "txt_path": "an4/txt/cen7-mmsh-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an365-mmkw-b.wav",
+      "txt_path": "an4/txt/an365-mmkw-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen4-mtcv-b.wav",
+      "txt_path": "an4/txt/cen4-mtcv-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen7-flmm2-b.wav",
+      "txt_path": "an4/txt/cen7-flmm2-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen7-mmdg-b.wav",
+      "txt_path": "an4/txt/cen7-mmdg-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen8-mblw-b.wav",
+      "txt_path": "an4/txt/cen8-mblw-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen2-fnsv-b.wav",
+      "txt_path": "an4/txt/cen2-fnsv-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an327-ftal-b.wav",
+      "txt_path": "an4/txt/an327-ftal-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an165-mfaa-b.wav",
+      "txt_path": "an4/txt/an165-mfaa-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-mdxn-b.wav",
+      "txt_path": "an4/txt/cen3-mdxn-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen4-mtos-b.wav",
+      "txt_path": "an4/txt/cen4-mtos-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen2-ffmm-b.wav",
+      "txt_path": "an4/txt/cen2-ffmm-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-mnjl-b.wav",
+      "txt_path": "an4/txt/cen3-mnjl-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen7-fkdo-b.wav",
+      "txt_path": "an4/txt/cen7-fkdo-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-mema-b.wav",
+      "txt_path": "an4/txt/cen3-mema-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen2-mdcs2-b.wav",
+      "txt_path": "an4/txt/cen2-mdcs2-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an362-mmkw-b.wav",
+      "txt_path": "an4/txt/an362-mmkw-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen4-mblb-b.wav",
+      "txt_path": "an4/txt/cen4-mblb-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an381-mmsh-b.wav",
+      "txt_path": "an4/txt/an381-mmsh-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-mkdb-b.wav",
+      "txt_path": "an4/txt/cen3-mkdb-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen6-mtcv-b.wav",
+      "txt_path": "an4/txt/cen6-mtcv-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen1-flmm2-b.wav",
+      "txt_path": "an4/txt/cen1-flmm2-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen4-fejs-b.wav",
+      "txt_path": "an4/txt/cen4-fejs-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an332-msrb-b.wav",
+      "txt_path": "an4/txt/an332-msrb-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen8-mmdg-b.wav",
+      "txt_path": "an4/txt/cen8-mmdg-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an125-fjdn-b.wav",
+      "txt_path": "an4/txt/an125-fjdn-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen1-fsaf2-b.wav",
+      "txt_path": "an4/txt/cen1-fsaf2-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an194-fmjd-b.wav",
+      "txt_path": "an4/txt/an194-fmjd-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an47-mmap-b.wav",
+      "txt_path": "an4/txt/an47-mmap-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an331-msrb-b.wav",
+      "txt_path": "an4/txt/an331-msrb-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen2-ftal-b.wav",
+      "txt_path": "an4/txt/cen2-ftal-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an49-mmap-b.wav",
+      "txt_path": "an4/txt/an49-mmap-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen8-mnjl-b.wav",
+      "txt_path": "an4/txt/cen8-mnjl-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an97-mskh-b.wav",
+      "txt_path": "an4/txt/an97-mskh-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen8-flrp-b.wav",
+      "txt_path": "an4/txt/cen8-flrp-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen7-meab-b.wav",
+      "txt_path": "an4/txt/cen7-meab-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-fjmd-b.wav",
+      "txt_path": "an4/txt/cen3-fjmd-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen4-ffmm-b.wav",
+      "txt_path": "an4/txt/cen4-ffmm-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen1-mmal-b.wav",
+      "txt_path": "an4/txt/cen1-mmal-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an172-mjda-b.wav",
+      "txt_path": "an4/txt/an172-mjda-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-fnsv-b.wav",
+      "txt_path": "an4/txt/cen3-fnsv-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an94-fplp-b.wav",
+      "txt_path": "an4/txt/an94-fplp-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen4-fkdo-b.wav",
+      "txt_path": "an4/txt/cen4-fkdo-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an147-fclc-b.wav",
+      "txt_path": "an4/txt/an147-fclc-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen6-mcfl-b.wav",
+      "txt_path": "an4/txt/cen6-mcfl-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an198-mgah-b.wav",
+      "txt_path": "an4/txt/an198-mgah-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an34-mtje-b.wav",
+      "txt_path": "an4/txt/an34-mtje-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen4-mcrt-b.wav",
+      "txt_path": "an4/txt/cen4-mcrt-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-mmsh-b.wav",
+      "txt_path": "an4/txt/cen3-mmsh-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an86-fbbh-b.wav",
+      "txt_path": "an4/txt/an86-fbbh-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen5-mjgk-b.wav",
+      "txt_path": "an4/txt/cen5-mjgk-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an230-msjm-b.wav",
+      "txt_path": "an4/txt/an230-msjm-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen5-fclc-b.wav",
+      "txt_path": "an4/txt/cen5-fclc-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen2-mblb-b.wav",
+      "txt_path": "an4/txt/cen2-mblb-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an305-mtcv-b.wav",
+      "txt_path": "an4/txt/an305-mtcv-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen2-meab-b.wav",
+      "txt_path": "an4/txt/cen2-meab-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen5-mdxs-b.wav",
+      "txt_path": "an4/txt/cen5-mdxs-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-fjdn-b.wav",
+      "txt_path": "an4/txt/cen3-fjdn-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen4-mewl-b.wav",
+      "txt_path": "an4/txt/cen4-mewl-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-mdcs-b.wav",
+      "txt_path": "an4/txt/cen3-mdcs-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen2-mkdb-b.wav",
+      "txt_path": "an4/txt/cen2-mkdb-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen1-mmkw-b.wav",
+      "txt_path": "an4/txt/cen1-mmkw-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen8-mfaa-b.wav",
+      "txt_path": "an4/txt/cen8-mfaa-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen8-mblb-b.wav",
+      "txt_path": "an4/txt/cen8-mblb-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen1-fnsv-b.wav",
+      "txt_path": "an4/txt/cen1-fnsv-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an225-fwxs-b.wav",
+      "txt_path": "an4/txt/an225-fwxs-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen5-mfaa-b.wav",
+      "txt_path": "an4/txt/cen5-mfaa-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen1-mcfl-b.wav",
+      "txt_path": "an4/txt/cen1-mcfl-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen7-fash-b.wav",
+      "txt_path": "an4/txt/cen7-fash-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen3-mnfe-b.wav",
+      "txt_path": "an4/txt/cen3-mnfe-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an139-meab-b.wav",
+      "txt_path": "an4/txt/an139-meab-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen5-mtos-b.wav",
+      "txt_path": "an4/txt/cen5-mtos-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen2-mtcv-b.wav",
+      "txt_path": "an4/txt/cen2-mtcv-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/an78-fjam-b.wav",
+      "txt_path": "an4/txt/an78-fjam-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen4-mmkw-b.wav",
+      "txt_path": "an4/txt/cen4-mmkw-b.txt"
+    },
+    {
+      "wav_path": "an4/wav/cen5-fsaf2-b.wav",
+      "txt_path": "an4/txt/cen5-fsaf2-b.txt"
+    }
+  ]
+}
