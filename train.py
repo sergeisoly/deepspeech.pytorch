@@ -17,6 +17,7 @@ cs.store(group="model", name="unidirectional", node=UniDirectionalConfig)
 
 @hydra.main(config_name="config")
 def hydra_main(cfg: DeepSpeechConfig):
+    print(cfg)
     train(cfg=cfg)
 
 
