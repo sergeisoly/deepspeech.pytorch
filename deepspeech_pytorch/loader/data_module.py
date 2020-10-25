@@ -17,8 +17,8 @@ class DeepSpeechDataModule(pl.LightningDataModule):
         super().__init__()
         print("BEFORE", data_cfg.train_path)
         print(data_cfg.val_path)
-        self.train_path = to_absolute_path(data_cfg.train_path)
-        self.val_path = to_absolute_path(data_cfg.val_path)
+        self.train_path = data_cfg.train_path
+        self.val_path = data_cfg.val_path
         print("AFTER", self.train_path)
         print(self.val_path)
         self.labels = labels
