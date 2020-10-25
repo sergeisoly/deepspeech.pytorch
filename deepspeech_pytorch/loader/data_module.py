@@ -1,5 +1,5 @@
 import pytorch_lightning as pl
-from hydra.utils import to_absolute_path
+from hydra.utils import to_absolute_path, get_original_cwd
 
 from deepspeech_pytorch.configs.train_config import DataConfig
 from deepspeech_pytorch.enums import MultiGPUType
@@ -15,6 +15,7 @@ class DeepSpeechDataModule(pl.LightningDataModule):
                  normalize,
                  multigpu: MultiGPUType):
         super().__init__()
+        print("OG CWD", get_original_cwd())
         print("BEFORE", data_cfg.train_path)
         print(data_cfg.val_path)
         self.train_path = to_absolute_path(data_cfg.train_path)
