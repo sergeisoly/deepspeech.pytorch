@@ -1,3 +1,5 @@
+import os
+
 import pytorch_lightning as pl
 from hydra.utils import to_absolute_path, get_original_cwd
 
@@ -15,6 +17,9 @@ class DeepSpeechDataModule(pl.LightningDataModule):
                  normalize,
                  multigpu: MultiGPUType):
         super().__init__()
+        print('LISTDIR', os.listdir('/'))
+        print('OS GET CWD', os.getcwd())
+        print('OS GET RELATIVE CWD', os.listdir('~/'))
         print("OG CWD", get_original_cwd())
         print("BEFORE", data_cfg.train_path)
         print(data_cfg.val_path)
