@@ -1,5 +1,5 @@
 {
-  "root_path": "/data/test/",
+  "root_path": "/dataset/test/",
   "samples": [
     {
       "wav_path": "an4/wav/cen1-mjgm-b.wav",

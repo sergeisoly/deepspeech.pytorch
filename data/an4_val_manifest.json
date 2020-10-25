@@ -1,5 +1,5 @@
 {
-  "root_path": "/data/val/",
+  "root_path": "/dataset/val/",
   "samples": [
     {
       "wav_path": "an4/wav/an29-mdxs-b.wav",

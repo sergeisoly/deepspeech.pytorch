@@ -1,5 +1,5 @@
 {
-  "root_path": "/data/train/",
+  "root_path": "/dataset/train/",
   "samples": [
     {
       "wav_path": "an4/wav/cen3-fplp-b.wav",
