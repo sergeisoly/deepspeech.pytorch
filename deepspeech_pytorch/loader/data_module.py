@@ -15,8 +15,8 @@ class DeepSpeechDataModule(pl.LightningDataModule):
                  normalize,
                  multigpu: MultiGPUType):
         super().__init__()
-        print("BEFORE", self.train_path)
-        print(self.val_path)
+        print("BEFORE", data_cfg.train_path)
+        print(data_cfg.val_path)
         self.train_path = to_absolute_path(data_cfg.train_path)
         self.val_path = to_absolute_path(data_cfg.val_path)
         print("AFTER", self.train_path)
