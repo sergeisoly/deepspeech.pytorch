@@ -17,16 +17,8 @@ class DeepSpeechDataModule(pl.LightningDataModule):
                  normalize,
                  multigpu: MultiGPUType):
         super().__init__()
-        print('LISTDIR', os.listdir('/'))
-        print('OS GET CWD', os.getcwd())
-        print('OS GET RELATIVE CWD', os.listdir('~/'))
-        print("OG CWD", get_original_cwd())
-        print("BEFORE", data_cfg.train_path)
-        print(data_cfg.val_path)
         self.train_path = to_absolute_path(data_cfg.train_path)
         self.val_path = to_absolute_path(data_cfg.val_path)
-        print("AFTER", self.train_path)
-        print(self.val_path)
         self.labels = labels
         self.data_cfg = data_cfg
         self.spect_cfg = data_cfg.spect
