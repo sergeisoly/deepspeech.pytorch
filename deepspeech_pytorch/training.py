@@ -51,6 +51,7 @@ def train(cfg):
     torch.cuda.manual_seed_all(cfg.training.seed)
     np.random.seed(cfg.training.seed)
     random.seed(cfg.training.seed)
+    torch.backends.cudnn.flags(enabled=False)
 
     main_proc = True
     device = torch.device("cpu" if cfg.training.no_cuda else "cuda")
@@ -173,10 +174,10 @@ def train(cfg):
                                 eps=cfg.optim.eps,
                                 weight_decay=cfg.optim.weight_decay
                                 )
-        torch.backends.cudnn.flags(enabled=False)
+                        
     else:
         raise ValueError("Optimizer has not been specified correctly.")
-
+    
     model, optimizer = amp.initialize(model, optimizer,
                                       enabled=not cfg.training.no_cuda,
                                       opt_level=cfg.apex.opt_level,
