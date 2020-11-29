@@ -190,7 +190,7 @@ def train(cfg):
 
     # Track states for optimizer/amp
     state.track_optim_state(optimizer)
-    if not cfg.training.no_cuda:
+    if not cfg.training.no_cuda and OmegaConf.get_type(cfg.optim) is not AdaHessianConfig:
         state.track_amp_state(amp)
 
     if is_distributed:
