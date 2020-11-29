@@ -173,7 +173,7 @@ def train(cfg):
                                 betas=cfg.optim.betas,
                                 eps=cfg.optim.eps,
                                 weight_decay=cfg.optim.weight_decay,
-                                update_each=cfg.update_each
+                                update_each=cfg.optim.update_each
                                 )
         torch.backends.cudnn.enabled = False
                         
