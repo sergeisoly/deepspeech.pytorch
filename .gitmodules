@@ -1,0 +1,3 @@
+[submodule "deepspeech_pytorch/ada-hessian"]
+	path = deepspeech_pytorch/ada-hessian
+	url = https://github.com/davda54/ada-hessian
