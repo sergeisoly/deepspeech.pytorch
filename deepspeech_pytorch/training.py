@@ -11,9 +11,10 @@ from hydra.utils import to_absolute_path
 from omegaconf import OmegaConf
 from torch.nn.parallel import DistributedDataParallel
 from warpctc_pytorch import CTCLoss
+from ada_hessian import AdaHessian
 
 from deepspeech_pytorch.checkpoint import FileCheckpointHandler, GCSCheckpointHandler
-from deepspeech_pytorch.configs.train_config import SGDConfig, AdamConfig, BiDirectionalConfig, UniDirectionalConfig, \
+from deepspeech_pytorch.configs.train_config import SGDConfig, AdamConfig, AdaHessianConfig, BiDirectionalConfig, UniDirectionalConfig, \
     FileCheckpointConfig, GCSCheckpointConfig
 from deepspeech_pytorch.decoder import GreedyDecoder
 from deepspeech_pytorch.loader.data_loader import SpectrogramDataset, DSRandomSampler, DSElasticDistributedSampler, \
@@ -165,6 +166,13 @@ def train(cfg):
                                       betas=cfg.optim.betas,
                                       eps=cfg.optim.eps,
                                       weight_decay=cfg.optim.weight_decay)
+    elif OmegaConf.get_type(cfg.optim) is AdaHessianConfig:
+        optimizer = AdaHessian(parameters,
+                                lr=cfg.optim.learning_rate,
+                                betas=cfg.optim.betas,
+                                eps=cfg.optim.eps,
+                                weight_decay=cfg.optim.weight_decay
+                                )
     else:
         raise ValueError("Optimizer has not been specified correctly.")
 
@@ -222,7 +230,10 @@ def train(cfg):
 
                 # compute gradient
                 with amp.scale_loss(loss, optimizer) as scaled_loss:
-                    scaled_loss.backward()
+                    if OmegaConf.get_type(cfg.optim) is AdaHessianConfig:
+                        scaled_loss.backward(create_graph=True)
+                    else:
+                        scaled_loss.backward()
                 torch.nn.utils.clip_grad_norm_(amp.master_params(optimizer), cfg.optim.max_norm)
                 optimizer.step()
             else:

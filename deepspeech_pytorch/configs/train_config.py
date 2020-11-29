@@ -81,6 +81,13 @@ class AdamConfig(OptimConfig):
 
 
 @dataclass
+class AdaHessianConfig(OptimConfig):
+    learning_rate: float = 0.1
+    eps: float = 1e-8
+    betas: tuple = (0.9, 0.999)
+
+
+@dataclass
 class CheckpointConfig:
     continue_from: str = ''  # Continue training from checkpoint model
     checkpoint: bool = True  # Enables epoch checkpoint saving of model
