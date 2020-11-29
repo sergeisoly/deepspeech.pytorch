@@ -1,4 +1,4 @@
-optim: adam
+optim: adahessian
 model:
   rnn_type: lstm
   hidden_size: 1024
