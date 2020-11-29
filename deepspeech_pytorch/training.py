@@ -173,6 +173,7 @@ def train(cfg):
                                 eps=cfg.optim.eps,
                                 weight_decay=cfg.optim.weight_decay
                                 )
+        torch.backends.cudnn.flags(enabled=False)
     else:
         raise ValueError("Optimizer has not been specified correctly.")
 
