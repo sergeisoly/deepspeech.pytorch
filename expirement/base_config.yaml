@@ -1,7 +1,7 @@
 model:
   rnn_type: lstm
-  hidden_size: 1024
-  hidden_layers: 3
+  hidden_size: 512
+  hidden_layers: 2
 checkpointing:
   continue_from: ''
   checkpoint: true
@@ -19,7 +19,7 @@ training:
 data:
   train_manifest: data/libri_train_manifest.csv
   val_manifest: data/libri_val_manifest.csv
-  batch_size: 32
+  batch_size: 4
   num_workers: 4
   labels_path: labels.json
   spect:
