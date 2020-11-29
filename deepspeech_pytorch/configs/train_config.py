@@ -85,12 +85,7 @@ class AdaHessianConfig(OptimConfig):
     learning_rate: float = 0.1
     eps: float = 1e-8
     betas: tuple = (0.9, 0.999)
-    hessian_power: float = 1.0
-    n_samples: int = 1
-    update_each: int = 1
-    average_conv_kernel: False
-    
-   
+    update_each: int = 2
 
 
 @dataclass
