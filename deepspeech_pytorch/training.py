@@ -232,10 +232,10 @@ def train(cfg):
                 optimizer.zero_grad()
 
                 # compute gradient
-                with amp.scale_loss(loss, optimizer) as scaled_loss:
-                    if OmegaConf.get_type(cfg.optim) is AdaHessianConfig:
-                        scaled_loss.backward(create_graph=True)
-                    else:
+                if OmegaConf.get_type(cfg.optim) is AdaHessianConfig:
+                    loss.backward(create_graph=True)
+                else:
+                    with amp.scale_loss(loss, optimizer) as scaled_loss:
                         scaled_loss.backward()
                 torch.nn.utils.clip_grad_norm_(amp.master_params(optimizer), cfg.optim.max_norm)
                 optimizer.step()
