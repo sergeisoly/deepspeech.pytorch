@@ -174,14 +174,15 @@ def train(cfg):
                                 eps=cfg.optim.eps,
                                 weight_decay=cfg.optim.weight_decay
                                 )
+        torch.backends.cudnn.enabled = False
                         
     else:
         raise ValueError("Optimizer has not been specified correctly.")
-    
-    model, optimizer = amp.initialize(model, optimizer,
-                                      enabled=not cfg.training.no_cuda,
-                                      opt_level=cfg.apex.opt_level,
-                                      loss_scale=cfg.apex.loss_scale)
+    if OmegaConf.get_type(cfg.optim) is not AdaHessianConfig:
+        model, optimizer = amp.initialize(model, optimizer,
+                                        enabled=not cfg.training.no_cuda,
+                                        opt_level=cfg.apex.opt_level,
+                                        loss_scale=cfg.apex.loss_scale)
     if state.optim_state is not None:
         optimizer.load_state_dict(state.optim_state)
     if state.amp_state is not None:
