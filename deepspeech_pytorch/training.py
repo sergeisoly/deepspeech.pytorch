@@ -11,7 +11,7 @@ from hydra.utils import to_absolute_path
 from omegaconf import OmegaConf
 from torch.nn.parallel import DistributedDataParallel
 from warpctc_pytorch import CTCLoss
-from adahessian.ada_hessian import AdaHessian
+from ada_hessian import AdaHessian
 
 from deepspeech_pytorch.checkpoint import FileCheckpointHandler, GCSCheckpointHandler
 from deepspeech_pytorch.configs.train_config import SGDConfig, AdamConfig, AdaHessianConfig, BiDirectionalConfig, UniDirectionalConfig, \
