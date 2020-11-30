@@ -11,17 +11,17 @@ checkpointing:
   save_n_recent_models: 5
   best_val_model_name: deepspeech_final.pth
   load_auto_checkpoint: false
-  save_folder: /content/drive/MyDrive/Optimization/ada_v2_model/models
+  save_folder: /content/drive/MyDrive/Optimization/hessian_v2/models
 training:
   no_cuda: false
   finetune: false
   seed: 123456
   dist_backend: nccl
-  epochs: 10
+  epochs: 20
 data:
   train_manifest: ../libri_train_manifest.csv
   val_manifest: ../libri_val_manifest.csv
-  batch_size: 16
+  batch_size: 32
   num_workers: 4
   labels_path: labels.json
   spect:
@@ -48,7 +48,7 @@ apex:
   loss_scale: 1
 visualization:
   id: DeepSpeech training
-  visdom: false
+  visdom: true
   tensorboard: true
-  log_dir: /content/drive/MyDrive/Optimization/ada_v2_model/visualize/deepspeech_final
+  log_dir: /content/drive/MyDrive/Optimization/hessian_v2/visualize/deepspeech_final
   log_params: false
