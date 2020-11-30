@@ -1,5 +1,5 @@
 optim:
-  update_each: 3
+  update_each: 2
 model:
   rnn_type: lstm
   hidden_size: 256
@@ -11,7 +11,7 @@ checkpointing:
   save_n_recent_models: 5
   best_val_model_name: deepspeech_final.pth
   load_auto_checkpoint: false
-  save_folder: /content/drive/MyDrive/Optimization/ada_v3_model/models
+  save_folder: /content/drive/MyDrive/Optimization/ada_v2_model/models
 training:
   no_cuda: false
   finetune: false
@@ -19,8 +19,8 @@ training:
   dist_backend: nccl
   epochs: 10
 data:
-  train_manifest: data/libri_train_manifest.csv
-  val_manifest: data/libri_val_manifest.csv
+  train_manifest: ../libri_train_manifest.csv
+  val_manifest: ../libri_val_manifest.csv
   batch_size: 16
   num_workers: 4
   labels_path: labels.json
@@ -50,5 +50,5 @@ visualization:
   id: DeepSpeech training
   visdom: false
   tensorboard: true
-  log_dir: /content/drive/MyDrive/Optimization/ada_v3_model/visualize/deepspeech_final
+  log_dir: /content/drive/MyDrive/Optimization/ada_v2_model/visualize/deepspeech_final
   log_params: false
