@@ -86,8 +86,8 @@ class AdaHessianConfig(OptimConfig):
     eps: float = 1e-8
     betas: tuple = (0.9, 0.999)
     update_each: int = 1
-    average_conv_kernel: bool = False
-    hessian_power: float = 1.0
+    # average_conv_kernel: bool = False
+    # hessian_power: float = 1.0
 
 
 @dataclass
