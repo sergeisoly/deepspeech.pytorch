@@ -26,6 +26,10 @@ from deepspeech_pytorch.testing import run_evaluation
 from deepspeech_pytorch.utils import check_loss
 
 
+import wandb
+wandb.init(project="adahessian-deepspeech")
+
+
 class AverageMeter(object):
     """Computes and stores the average and current value"""
 
@@ -290,6 +294,10 @@ def train(cfg):
             visdom_logger.update(epoch, state.result_state)
         if main_proc and cfg.visualization.tensorboard:
             tensorboard_logger.update(epoch, state.result_state, model.named_parameters())
+        if main_proc and cfg.visualization.wandb:
+            wandb.log({'Average Loss': state.avg_loss,
+                       'Average WER': wer,
+                       'Average CER': cer})
 
         if main_proc and cfg.checkpointing.checkpoint:  # Save epoch checkpoint
             checkpoint_handler.save_checkpoint_model(epoch=epoch, state=state)

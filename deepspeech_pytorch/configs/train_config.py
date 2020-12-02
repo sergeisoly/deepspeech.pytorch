@@ -116,8 +116,10 @@ class VisualizationConfig:
     id: str = 'DeepSpeech training'  # Name to use when visualizing/storing the run
     visdom: bool = False  # Turn on visdom graphing
     tensorboard: bool = False  # Turn on Tensorboard graphing
+    wandb: bool = False
     log_dir: str = 'visualize/deepspeech_final'  # Location of Tensorboard log
     log_params: bool = False  # Log parameter values and gradients
+
 
 
 @dataclass
