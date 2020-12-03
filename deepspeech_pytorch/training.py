@@ -304,7 +304,8 @@ def train(cfg):
         if main_proc and cfg.visualization.tensorboard:
             tensorboard_logger.update(epoch, state.result_state, model.named_parameters())
         if main_proc and cfg.visualization.wandb:
-            wandb.log({'Average Loss': state.avg_loss,
+            wandb.log({'epoch': epoch,
+                       'Average Loss': state.avg_loss,
                        'Average WER': wer,
                        'Average CER': cer})
 
