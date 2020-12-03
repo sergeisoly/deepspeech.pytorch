@@ -262,7 +262,6 @@ def train(cfg):
 
             state.avg_loss += loss_value
             losses.update(loss_value, inputs.size(0))
-            wandb.log({'Loss': loss_value})
 
             # measure elapsed time
             batch_time.update(time.time() - end)
