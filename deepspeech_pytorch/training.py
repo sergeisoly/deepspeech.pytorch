@@ -219,8 +219,6 @@ def train(cfg):
     data_time = AverageMeter()
     losses = AverageMeter()
 
-    wandb.watch(model, criterion, log="all", log_freq=10)
-
     for epoch in range(state.epoch, cfg.training.epochs):
         model.train()
         end = time.time()
