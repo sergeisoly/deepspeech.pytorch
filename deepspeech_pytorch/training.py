@@ -51,7 +51,7 @@ class AverageMeter(object):
 def train(cfg):
     config = dict(epochs=cfg.training.epochs,
                   batch_size=cfg.data.batch_size,
-                  learning_rate=cfg.oprim.lerning_rate,
+                  learning_rate=cfg.optim.lerning_rate,
                   rnn_type=cfg.model.rnn_type,
                   hidden_size=cfg.model.hidden_size,
                   hidden_layers=cfg.model.hidden_layers,
