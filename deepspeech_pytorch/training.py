@@ -27,7 +27,6 @@ from deepspeech_pytorch.utils import check_loss
 
 
 import wandb
-wandb.init(project="adahessian-deepspeech")
 
 
 class AverageMeter(object):
@@ -50,6 +49,16 @@ class AverageMeter(object):
 
 
 def train(cfg):
+    config = dict(epochs=cfg.training.epochs,
+                  batch_size=cfg.data.batch_size,
+                  learning_rate=cfg.oprim.lerning_rate,
+                  rnn_type=cfg.model.rnn_type,
+                  hidden_size=cfg.model.hidden_size,
+                  hidden_layers=cfg.model.hidden_layers,
+                  optimizer=cfg.optim,
+                  update_hessian=cfg.optim.update_each)
+    wandb.init(project="adahessian-deepspeech", config)
+
     # Set seeds for determinism
     torch.manual_seed(cfg.training.seed)
     torch.cuda.manual_seed_all(cfg.training.seed)
@@ -210,6 +219,8 @@ def train(cfg):
     data_time = AverageMeter()
     losses = AverageMeter()
 
+    wandb.watch(model, criterion, log="all", log_freq=10)
+
     for epoch in range(state.epoch, cfg.training.epochs):
         model.train()
         end = time.time()
@@ -246,6 +257,7 @@ def train(cfg):
                         scaled_loss.backward()
                 torch.nn.utils.clip_grad_norm_(amp.master_params(optimizer), cfg.optim.max_norm)
                 optimizer.step()
+                wandb.log({"loss": loss})
             else:
                 print(error)
                 print('Skipping grad update')
@@ -253,6 +265,7 @@ def train(cfg):
 
             state.avg_loss += loss_value
             losses.update(loss_value, inputs.size(0))
+            wandb.log({'Loss': loss_value})
 
             # measure elapsed time
             batch_time.update(time.time() - end)
@@ -305,6 +318,7 @@ def train(cfg):
         for g in optimizer.param_groups:
             g['lr'] = g['lr'] / cfg.optim.learning_anneal
         print('Learning rate annealed to: {lr:.6f}'.format(lr=g['lr']))
+        wandb.log({"lr": g['lr']})
 
         if main_proc and (state.best_wer is None or state.best_wer > wer):
             checkpoint_handler.save_best_model(epoch=epoch, state=state)
