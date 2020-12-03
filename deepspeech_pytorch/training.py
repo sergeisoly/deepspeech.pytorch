@@ -257,7 +257,6 @@ def train(cfg):
                         scaled_loss.backward()
                 torch.nn.utils.clip_grad_norm_(amp.master_params(optimizer), cfg.optim.max_norm)
                 optimizer.step()
-                wandb.log({"loss": loss})
             else:
                 print(error)
                 print('Skipping grad update')
