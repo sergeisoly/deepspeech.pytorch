@@ -182,16 +182,16 @@ def train(cfg):
                                       weight_decay=cfg.optim.weight_decay)
     elif OmegaConf.get_type(cfg.optim) is AdaHessianConfig:
         optimizer = AdaHessian(parameters,
-                                lr=cfg.optim.learning_rate,
-                                betas=cfg.optim.betas,
-                                eps=cfg.optim.eps,
-                                weight_decay=cfg.optim.weight_decay,
-                                update_each=cfg.optim.update_each,
-                                average_conv_kernel=cfg.optim.average_conv_kernel,
-                                # hessian_power=cfg.optim.hessian_power
-                                )
+                               lr=cfg.optim.learning_rate,
+                               betas=cfg.optim.betas,
+                               eps=cfg.optim.eps,
+                               weight_decay=cfg.optim.weight_decay,
+                               update_each=cfg.optim.update_each,
+                            #    average_conv_kernel=cfg.optim.average_conv_kernel,
+                               # hessian_power=cfg.optim.hessian_power
+                               )
         torch.backends.cudnn.enabled = False
-                        
+    
     else:
         raise ValueError("Optimizer has not been specified correctly.")
     if OmegaConf.get_type(cfg.optim) is not AdaHessianConfig:
