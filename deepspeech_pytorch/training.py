@@ -57,7 +57,7 @@ def train(cfg):
                   hidden_layers=cfg.model.hidden_layers,
                   optimizer=cfg.optim,
                   update_hessian=cfg.optim.update_each)
-    wandb.init(project="adahessian-deepspeech", config)
+    wandb.init(project="adahessian-deepspeech", config=config)
 
     # Set seeds for determinism
     torch.manual_seed(cfg.training.seed)
