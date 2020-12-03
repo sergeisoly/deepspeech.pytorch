@@ -9,7 +9,7 @@ checkpointing:
   save_n_recent_models: 5
   best_val_model_name: deepspeech_final.pth
   load_auto_checkpoint: false
-  save_folder: /content/drive/MyDrive/Optimization/adam/models
+  save_folder: /content/drive/MyDrive/Optimization/adam_360/models
 training:
   no_cuda: false
   finetune: false
@@ -48,5 +48,5 @@ visualization:
   id: DeepSpeech training
   visdom: false
   tensorboard: true
-  log_dir: /content/drive/MyDrive/Optimization/adam/visualize/deepspeech_final
+  log_dir: /content/drive/MyDrive/Optimization/adam_360/visualize/deepspeech_final
   log_params: false

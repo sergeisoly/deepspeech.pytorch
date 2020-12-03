@@ -11,7 +11,7 @@ checkpointing:
   save_n_recent_models: 5
   best_val_model_name: deepspeech_final.pth
   load_auto_checkpoint: false
-  save_folder: /content/drive/MyDrive/Optimization/hessian_v4_2/models
+  save_folder: /content/drive/MyDrive/Optimization/hessian_v4_360/models
 training:
   no_cuda: false
   finetune: false
@@ -51,5 +51,5 @@ visualization:
   visdom: false
   tensorboard: true
   wandb: true
-  log_dir: /content/drive/MyDrive/Optimization/hessian_v4_2/visualize/deepspeech_final
+  log_dir: /content/drive/MyDrive/Optimization/hessian_v4_360/visualize/deepspeech_final
   log_params: false
