@@ -48,5 +48,6 @@ visualization:
   id: DeepSpeech training
   visdom: false
   tensorboard: true
+  wandb: true
   log_dir: /content/drive/MyDrive/Optimization/adam_360/visualize/deepspeech_final
   log_params: false
