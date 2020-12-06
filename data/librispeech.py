@@ -23,7 +23,7 @@ args = parser.parse_args()
 LIBRI_SPEECH_URLS = {
     "train": [
             #   "http://www.openslr.org/resources/12/train-clean-100.tar.gz",
-              "http://www.openslr.org/resources/12/train-clean-360.tar.gz",
+            #   "http://www.openslr.org/resources/12/train-clean-360.tar.gz",
             #   "http://www.openslr.org/resources/12/train-other-500.tar.gz"
               ],
 
